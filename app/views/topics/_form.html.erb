@@ -1,17 +1,5 @@
 <div class="well">
 <%= form_for(@topic) do |f| %>
-<% if @topic.errors.any? %>
-<div class="error_explanation alert alert-error">
-	<h3><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h3>
-		<ul>
-		<% @topic.errors.full_messages.each do |msg| %>
-		<li>
-			<%= msg %>
-		</li>
-		<% end %>
-	</ul>
-</div>
-<% end %>
 <div class="row-fluid">
 	<div class="span7">
 		What topic you want to talk on :
