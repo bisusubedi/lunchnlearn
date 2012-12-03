@@ -1,0 +1,30 @@
+.field_with_errors {
+input,textarea{
+
+  border: solid red 1px;
+ 
+  display: inline;
+  }
+}
+
+#error_explanation {
+  width: 450px;
+  color: #B94A48;
+  background-color: #F2DEDE;
+  border-color: #EED3D7;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    
+    margin-bottom: 0px;
+   color: #B94A48;
+  background-color: #F2DEDE;
+  }
+  ul li {
+  margin-left:20px;
+    font-size: 12px;
+    list-style: square;
+  }
+}
