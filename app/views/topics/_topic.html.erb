@@ -1,9 +1,9 @@
-<div class="well topic_row">
+<div class="well ">
 	<div class="row-fluid">
 		<div class="span2">
 			<%= link_to "<i class='icon icon-arrow-up'></i>".html_safe,vote_topic_path(topic),{:class=>"btn btn-mini",:title=>"Vote",:method=>:post}%> <span class="badge "><%= topic.vote_count %> </span> Votes
 		</div>
-		<div class="span9">
+		<div class="span10">
 			<strong><%= topic.name%></strong>
 			<br />
 			<%= topic.description%>

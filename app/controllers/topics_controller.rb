@@ -20,7 +20,7 @@ class TopicsController < ApplicationController
    def vote
      @topic = Topic.find_by_id(params[:id])
      if current_user.has_voting_right?
-        @vote = current_user.votes.build(:topic_id => @topic )
+        @vote = current_user.votes.build(:topic_id => @topic.id )
         @vote.save!
         flash[:notice] = "Your vote has been submitted." 
       else
