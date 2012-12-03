@@ -1,5 +1,7 @@
 Lunchnlearn::Application.routes.draw do
-  resources :topics
+  resources :topics do 
+    post 'vote' ,:on => :member
+  end
 
   devise_for :users
 
