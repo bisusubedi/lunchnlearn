@@ -17,6 +17,7 @@ development:
   username: root
   password:
   host: localhost
+  #socket: /opt/lampp/var/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -28,8 +29,9 @@ test:
   database: lunchnlearn_test
   pool: 5
   username: root
-  password:
+  password: 
   host: localhost
+  #socket: /opt/lampp/var/mysql/mysql.sock
 
 production:
   adapter: mysql2
@@ -40,3 +42,4 @@ production:
   username: root
   password:
   host: localhost
+  #socket: /opt/lampp/var/mysql/mysql.sock
