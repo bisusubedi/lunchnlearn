@@ -11,4 +11,15 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   
   has_many :topics
+  has_many :votes
+  
+  def total_votes
+    self.votes.count
+  end
+  
+  def has_voting_right?
+    self.total_votes < 4 
+  end
+    
+    
 end
