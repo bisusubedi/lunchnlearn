@@ -4,7 +4,7 @@ class CreateTopics < ActiveRecord::Migration
       t.integer :user_id
       t.string :name
       t.text :description
-      t.integer :vote_count
+      t.integer :vote_count ,:default => 0
 
       t.timestamps
     end

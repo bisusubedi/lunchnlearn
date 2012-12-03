@@ -9,9 +9,6 @@ class Topic < ActiveRecord::Base
   
   scope :in_recent_order ,:order => "created_at desc"
   
-  def increment_vote_count
-    self.vote_count.increment
-    self.save!
-  end
+ 
   
 end

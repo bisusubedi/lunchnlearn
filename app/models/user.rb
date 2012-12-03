@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   end
   
   def has_voting_right?
-    self.total_votes < 4 
+    self.total_votes <= 4 
   end
     
     

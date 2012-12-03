@@ -16,5 +16,17 @@ class TopicsController < ApplicationController
        redirect_to topics_url,alert: 'Please fill topic and highlights of your talk.' 
     end
    end 
+   
+   def vote
+     @topic = Topic.find_by_id(params[:id])
+     if current_user.has_voting_right?
+        @vote = current_user.votes.build(:topic_id => @topic )
+        @vote.save!
+        flash[:notice] = "Your vote has been submitted." 
+      else
+         flash[:alert] = "Your have finished your voting limit." 
+     end
+     redirect_to topics_url
+   end
 
 end
