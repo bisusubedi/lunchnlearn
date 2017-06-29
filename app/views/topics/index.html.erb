@@ -1,6 +1,4 @@
 <%= render 'form' %>
-<% if !@topics.blank? %>
-	<h4>You can also vote on existing topics</h4>
-	
+<% if !@topics.blank? %>	
 	<%= render @topics%>
 <% end %>

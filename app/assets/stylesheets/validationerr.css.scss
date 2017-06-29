@@ -2,22 +2,21 @@
 input,textarea{
 
   border: solid red 1px;
- 
+
   display: inline;
   }
 }
 
 #error_explanation {
-  width: 450px;
   color: #B94A48;
-  background-color: #F2DEDE;
-  border-color: #EED3D7;
+  background: #F2DEDE;
+  border-radius: 4px;
   h2 {
+    border-radius: 4px;
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
     font-size: 12px;
-    
     margin-bottom: 0px;
    color: #B94A48;
   background-color: #F2DEDE;

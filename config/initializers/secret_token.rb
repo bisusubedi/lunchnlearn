@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Lunchnlearn::Application.config.secret_token = '0795ddbff21c2eb668da35708b0871133fca69e1dedfdd03695cce7f09bf18a7cc23b1a2f99723b6ec645dcd572db89100b1650426c2cbfb28cf0f16d53c8636'
+Lunchnlearn::Application.config.secret_token = '12f7a71bb504f38edc724bd644fdfc3c9fe2fc10730511c80547996329b9322b9f4b07093241503c39207fd6572393a34b29c575d00653e919d714cb65883f12'

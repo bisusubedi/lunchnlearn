@@ -1,14 +1,22 @@
-<div class="well ">
-	<div class="row-fluid">
-		<div class="span2">
-			<%= link_to "<i class='icon icon-arrow-up'></i>".html_safe,vote_topic_path(topic),{:class=>"btn btn-mini",:title=>"Vote",:method=>:post}%> <span class="badge "><%= topic.vote_count %> </span> Votes
-		</div>
-		<div class="span10">
-			<strong><%= topic.name%></strong>
-			<br />
-			<%= topic.description%>
-			<br/>
-			Posted <em><%= time_ago_in_words(topic.created_at)%> ago</em> by <%=  topic.user.full_name%>
+<div class="panel panel-default">
+	<div class="panel-heading"><strong><%= topic.name%></strong>
+		<span class='author label label-info'>by <%=  topic.user.full_name%></span>
+		<span class ='btn btn-danger label pull-right'>x</span>
+	</div>
+	<div class="panel-body">
+		<div class='row'>
+			<div class='col-sm-9'>
+				<div title='<%= topic.description %>'><%= topic.description.truncate(200)%></div>
+			</div>
+			<div class='col-sm-3'>
+				<div class='pull-right'>
+					<span class='small'>Posted <%= time_ago_in_words(topic.created_at)%> ago</span>
+					<span class='vote_counts badge'><%= pluralize(topic.vote_count, 'vote') %> </span>
+					<span class='btn'>
+						<%= link_to "<i class='glyphicon glyphicon-thumbs-up'></i>".html_safe,vote_topic_path(topic),{:class => 'btn btn-primary label', :title=>"Vote",:method=>:post}%>
+					</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
